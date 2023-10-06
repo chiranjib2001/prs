@@ -1,5 +1,7 @@
 Welcome to the REPO
 
+to find how to contribute find this https://hacktoberfest.com/participation/#contributors
+
 set up guide::
     >you must have mysql database and node js if not install it in your system. 
         Refer thse
