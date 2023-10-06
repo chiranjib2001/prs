@@ -1,0 +1,283 @@
+
+/* navgation */
+nav{
+    position: fixed;
+    width: 87vw;
+    background-color: rgba(0, 217, 255, 0.945);
+    margin-right: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    padding: 0vw 5vw;
+    box-shadow: 2px 2px 10px rgba(0, 0 , 0, 0.15);
+}
+nav img{
+    height: 85px;
+    width: 100px;
+    cursor: pointer;
+}
+/* nav .navigation{
+    display: flex;
+}
+#menu-btn{
+    height: 10px;
+    width: 10px;
+    display: none;
+}
+#menu-close{
+    display:none ;
+} */
+nav .navigation ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav .navigation ul li{
+    list-style: none;
+    margin-left: 2vw;
+}
+nav .navigation ul li a{
+    text-decoration:none ; 
+    color: rgb(0, 0, 48);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    font-weight: 6000 ;
+    transition: 0.3s ease;
+}
+nav .navigation ul li a:hover{
+    color: rgb(115, 255, 0);
+}
+/* index */
+#home{
+    background-image: linear-gradient(rgba(9,5,54,0.3),rgba(5,4,46,0.7)),url("/backg.jpg");
+    /* background-image: url(backg.jpg); */
+
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#home h1{
+    text-decoration:solid;
+    text-emphasis-color: #233323;
+    color: rgb(248, 252, 5);
+    font-size: 3rem;
+    letter-spacing: 1px;
+}
+#home p,#home a{
+    color: rgb(217, 216, 224);
+    line-height: 25px;
+    font-family:Georgia;
+    text-align: center;
+
+    font-size: 2.5;
+    text-justify: auto;
+}
+#features,
+.review-list
+{
+    padding: 5vw 8vw 0 8vw;
+    text-align: center;
+}
+ 
+#features .fea-base
+,.review-list *{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+    grid-gap: 1rem; 
+    margin-top: 1px;
+    text-align: start;
+
+}
+#features .fea-box{
+    background-color: rgb(198, 235, 235);
+
+    text-align: start;
+}
+#features .fea-box h2{
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #0c0453;
+    padding: 13px 0 7px 0 ;
+}
+#features .fea-box p{
+    justify-content: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    color: #02020f;
+    padding: 13px 0 7px 0 ;
+}
+
+/* new register */
+#new{
+    background-image: linear-gradient(rgba(9,5,54,0.3),rgba(5,4,46,0.7)),url("/new.jpg");
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* form  */
+/* Form styles */
+.form-group{
+    width: 500px;
+}
+  
+  label {
+    display: grid;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: cornsilk;
+    font-weight: bold;
+    margin-bottom: 5px;
+    width: 300px;
+
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  input[type="email"] {
+    width: 300px;
+    display: grid;
+    place-items: center;
+    padding: 117;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  input[type="submit"]
+{
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  input[type="button"]:hover{
+    background-color: #06ff1b;
+  }
+  input{
+    width: 300px;
+    height: 20px;
+  }
+  .newf {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2px;
+  }
+  #new form div{
+    display: grid;
+    place-items: center;
+
+  }
+  /* footerf */
+  footer{
+    background-color:coral;
+    margin: 0%;
+    padding: 0%;
+  }
+
+  /* slotlist */
+
+  .slots .container .slotlist table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: Arial, sans-serif;
+        color: #333;
+      }
+      
+      .slots .container .slotlist th, td {
+        padding: 12px 15px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+      
+      .slots .container .slotlist th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      .slots .container .slotlist tr:hover {
+        background-color: #f5f5f5;
+      }
+    
+      @media (max-width < 600px) {
+        .slots .container .slotlist table {
+          font-size: 14px;
+        }
+      
+      .slots .container .slotlist th, td {
+          padding: 8px 10px;
+  }
+}
+#admin-login-form,.block,.block *,#rate-form,#rate-form *,
+#admin-login-form *
+,#reserve
+,#reserve *
+#cancel, #cancel *,
+#add-vehicle *,
+#tbl,
+.slots
+{
+  display: grid;
+  place-items: center;
+  align-items: center;
+  border-radius: 10px;
+
+}
+#admin-login-form form label{
+  color: #04610c;
+}
+#admin-login-form form input{
+  width: 260px;
+  height: 25px;
+  background-color: blanchedalmond;
+}
+#admin-login-form form,
+#reserve ,#reserve form,
+#block ,#rate-form
+,#add-vehicle,
+#rate-form form{
+  margin: 10px 40px;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #87f891;
+}
+#block form button,
+#reserve form button,
+#rate-form form button
+,#b{
+    color: rgb(11, 3, 19);
+    background-color: rgb(211, 6, 50);
+    border-radius: 15pt;
+    margin-top: 10px;
+    height: 40px; 
+    width: 100px; 
+    cursor: pointer; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#rate-form{
+  background-color: #ff06ac;
+}
+.au{
+  background-image: linear-gradient(rgba(9,5,54,0.3),rgba(5,4,46,0.7)),url("/parkg.jpg");
+  background-size: cover;
+  height: 100vh;
+  color: #ffffff;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

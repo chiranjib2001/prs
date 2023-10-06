@@ -1,0 +1,59 @@
+-- Switch to the "prs" database
+USE prs;
+ 
+-- Create the User table
+CREATE TABLE User (
+  uid INT PRIMARY KEY AUTO_INCREMENT,
+  uname VARCHAR(50) NOT NULL UNIQUE,
+  upass VARCHAR(50) NOT NULL,
+  uemail VARCHAR(100) NOT NULL,
+  name VARCHAR(45) 
+);
+
+-- Create the Admin table
+CREATE TABLE Admin (
+  aid INT PRIMARY KEY AUTO_INCREMENT,
+  aname VARCHAR(50) NOT NULL,
+  apass VARCHAR(50) NOT NULL
+);
+
+-- Create the Slots table
+CREATE TABLE Slots (
+  sid INT PRIMARY KEY AUTO_INCREMENT,
+  sno INT NOT NULL,
+  vehicle_type VARCHAR(20) NOT NULL,
+  price_per_hour DECIMAL(8,2) NOT NULL,
+  is_available BOOLEAN NOT NULL,
+  details VARCHAR(255)
+);
+
+-- Create the Vehicle table
+CREATE TABLE Vehicle (
+  vid INT PRIMARY KEY AUTO_INCREMENT,
+  userid INT NOT NULL,
+  vehicle_type VARCHAR(20) NOT NULL,
+  plate_number VARCHAR(20) NOT NULL,
+  details VARCHAR(255),
+  FOREIGN KEY (userid) REFERENCES User(uid)
+);
+
+-- Create the Reservations table
+CREATE TABLE Reservations (
+  resid INT PRIMARY KEY AUTO_INCREMENT,
+  userid INT NOT NULL,
+  slotid INT NOT NULL,
+  vehicle_plate_number VARCHAR(20), 
+  reserve_date DATE NOT NULL,
+  cancel_status BOOLEAN NOT NULL,
+  FOREIGN KEY (userid) REFERENCES User(uid),
+  FOREIGN KEY (slotid) REFERENCES Slots(sid)
+);
+
+-- Create the Reviews table
+CREATE TABLE Reviews (
+  reviewid INT PRIMARY KEY AUTO_INCREMENT,
+  rating INT,
+  message VARCHAR(255),
+  date DATE,
+  name VARCHAR(50)
+);

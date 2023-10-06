@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Start</title>
+    <style>
+        h1 {
+        color: #333;
+        text-emphasis: high;
+        }
+
+        main {
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 20px;
+        margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="logo.png" alt="">
+            <div class="navigation">
+                <ul>
+                    <li><a href="/"><b>Home</b></a></li>
+                    <li><a href="/about"><b>About Us</b></a></li>
+                    <li><a href="/new"><b>New user?</b></a></li>
+                    <li><a href="/admin"><b>Admin login</b></a></li>
+                    <li><a href="/user"><b>User login</b></a></li>
+                    <li><a href="/rate"><b>Rate us</b></a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div style="height: 100px; width: 100%;"></div>
+    <main class="au">
+        <h2>About Us</h2>
+        <p>This is Chiranjib <br> welcome to my System here you can find a place for your car/bike to park. <br> happy Parking</p>
+        <p>For more details about me view ny resume <a href="/res.pdf" target="_blank">Here</a></p>
+    </main>
+    <section class="review">
+        <div class="container">
+            <marquee behavior="" direction=""><h2>Our customer reviews</h2></marquee>
+            <div class="review-list">
+                <!--reviews dynamically populated based on data from the database-->
+                <%- reviewListHtml %>
+            </div>
+        </div>
+    </section>
+       <footer >
+        <div id="contactus">
+            <h3>Feel free to contact me</h3>
+            mob: +91 9348483494 <br>
+            email: chiranjibmohapatra2001@gmail.com 
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <title>Start</title>
+</head>
+<body style="background-color: rgb(193, 240, 224);">
+    <header>
+        <nav>
+            <img src="/logo.png" alt="">
+            <div class="navigation">
+                <ul>
+                    <li><a href="/"><b>Home</b></a></li>
+                    <li><a href="#reserve"><b>RESERVE HERE</b></a></li>
+                    <li><a href="#cancel"><b>CANCEL RESERVE</b></a></li>
+                    <li><a href="#add-vehicle"><b>ADD VEHICLE</b></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div style="height: 100px; width: 100%;"></div>
+    <section id="welcome">
+        <h1>Welcome Here you can Do the reservation and related operations</h1>
+        <h2>Happy Parking</h2>
+    </section>
+
+    <section id="reservations" style="text-align: center;">
+        <h2>Your Reservations</h2>
+        <table id="tbl">
+          <thead>
+            <tr>
+              <th style="margin-right: 2px;">Reservation ID</th>
+              <th>Slot ID</th>
+              <th>Vehicle Plate Number</th>
+              <th>Reservation Date</th>
+              <th>Cancel Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% user.reservations.forEach((reservation) => { %>
+              <tr>
+                <td><b><%= reservation.resid %></b></td>
+                <td><%= reservation.slotid %></td>
+                <td><%= reservation.vehicle_plate_number %></td>
+                <td><%= reservation.reserve_date %></td>
+                <td><%= reservation.cancel_status %></td>
+              </tr>
+            <% }); %>
+          </tbody>
+        </table>
+    </section>
+      
+
+    <section id="reserve">
+        <marquee behavior="" direction=""><h2>Reserve Here</h2></marquee>
+        <form action="/user/reserve" method="POST">
+          <label for="slotId">Slot ID:</label>
+          <input type="text" name="slotId" id="slotId" required>
+          <label for="vehiclePlate">Vehicle Plate Number:</label>
+          <input type="text" name="vehiclePlate" id="vehiclePlate" required>
+          <label for="reserveDate">Reservation Date:</label>
+          <input type="date" name="reserveDate" id="reserveDate" required>
+          <button id="b" type="submit">Reserve</button>
+        </form>
+      </section>
+      
+      <section style="background-color: rgb(1, 119, 119); height: 300px;" id="cancel">
+        <marquee behavior="" direction=""><h2>Cancel your Reservation HERE</h2></marquee>
+        <form action="/user/cancel" method="POST">
+          <label for="reservationId">Reservation ID:</label>
+          <input type="text" name="reservationId" id="reservationId" required>
+          <button id="b" type="submit">Cancel</button>
+        </form>
+      </section>
+      
+      <section id="add-vehicle">
+        <h2>Add Vehicle</h2>
+        <form action="/user/add-vehicle" method="POST">
+          <label for="vehicleType">Vehicle Type:</label>
+          <input type="text" name="vehicleType" id="vehicleType" required>
+          <label for="plateNumber">Plate Number:</label>
+          <input type="text" name="plateNumber" id="plateNumber" required>
+          <label for="details">Details:</label>
+          <input type="text" name="details" id="details" required>
+          <button id="b" type="submit">Add Vehicle</button>
+        </form>
+      </section>
+      
+
+    <section>
+
+        <form action="/user/logout" method="POST">
+            <button type="submit">Logout</button>
+          </form>
+            
+    </section>
+    <footer >
+        <div id="contactus">
+            <h3>Feel free to contact me</h3>
+            mob: +91 9348483494 <br>
+            email: chiranjibmohapatra2001@gmail.com 
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

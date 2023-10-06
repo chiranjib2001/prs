@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">add eye icon -->
+    <title>New Registration</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="/logo.png" alt="">
+            <div class="navigation">
+                <ul>
+                    <li><a href="/"><b>Home</b></a></li>
+                    <li><a href="/about"><b>About Us</b></a></li>
+                    <li><a href="/new"><b>New user?</b></a></li>
+                    <li><a href="/admin"><b>Admin login</b></a></li>
+                    <li><a href="/user"><b>User login</b></a></li>
+                    <li><a href="/rate"><b>Rate us</b></a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="new">
+        <h1 style="color: antiquewhite;">Register For Free and enjoy the Services</h1> 
+        <form action="/register" method="post" class="form-group">
+            <label class="newf" for="name">what's your name?</label>
+            <input class="newf" type="text" id="name" name="name" >
+            <label class="newf" for="uname">Give a unique Username</label>
+            <input class="newf" type="text" name="uname" id="uname" required>
+            <label class="newf" for="pass">Password</label>
+            <input class="newf" type="password" name="pass" id="pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-z])(?=.*[0-9]).{5,}" required>
+            <!-- <i class="far fa-eye" id="togglePassword" style="margin-left: -30px; cursor: pointer;"></i> -->
+            <label class="newf" for="email">Give email</label>
+            <input class="newf" type="email" name="email" id="email" required><br>
+            <div class="newf">
+                <input style="height: 50px; width: 100px;" class="newf" type="submit" value="Submit">      
+            </div>
+        </form>
+    </section>
+    <footer>
+           
+        <div id="contactus">
+            <h3>Feel free to contact me</h3>
+
+            mob: +91 9348483494 <br>
+            email: chiranjibmohapatra2001@gmail.com 
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

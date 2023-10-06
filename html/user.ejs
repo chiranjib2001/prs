@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Start</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="logo.png" alt="">
+            <div class="navigation">
+                <ul>
+                    <li><a href="/"><b>Home</b></a></li>
+                    <li><a href="/about"><b>About Us</b></a></li>
+                    <li><a href="/new"><b>New user?</b></a></li>
+                    <li><a href="/admin"><b>Admin login</b></a></li>
+                    <li><a href="/user"><b>User login</b></a></li>
+                    <li><a href="/rate"><b>Rate us</b></a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div style="height: 100px; width: 100%;"></div>
+
+        <section id="admin-login-form">
+            <h2>User Login</h2>
+            <form action="/user/login" method="POST">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+        
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+        
+                <button type="submit">Login</button>
+            </form>
+        
+        </section>
+       <footer >
+        <div id="contactus">
+            <h3>Feel free to contact me</h3>
+            mob: +91 9348483494 <br>
+            email: chiranjibmohapatra2001@gmail.com 
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

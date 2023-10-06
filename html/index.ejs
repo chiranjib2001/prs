@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Start</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="logo.png" alt="">
+            <div class="navigation">
+                <ul>
+                    <li><a href="/"><b>Home</b></a></li>
+                    <li><a href="/about"><b>About Us</b></a></li>
+                    <li><a href="/new"><b>New user?</b></a></li>
+                    <li><a href="/admin"><b>Admin login</b></a></li>
+                    <li><a href="/user"><b>User login</b></a></li>
+                    <li><a href="/rate"><b>Rate us</b></a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Park easily with us</h1>
+        <p>Here you can have your two or four wheeler parked. Feel free to contact us from the footer or click <a href="#contactus" style="display: block;">here</a>happy parking</p>
+    </section>
+    <section id="features">
+        <h1>Services</h1>
+        <p>Services we offer to you</p>
+        <div class="fea-base">
+            <div class="fea-box">
+                <h2>User registration Facilty</h2>
+                <p>new user can get them registered</p>
+            </div>
+            <div class="fea-box">
+                <h2>Login Facilty</h2>
+                <p>admin and user can login to their system</p>
+            </div>
+            <div class="fea-box">
+                <h2>Dashboard</h2>
+                <p>Both admin and users will get their own dashboard from which they can operate and control</p>
+            </div>
+            <div class="fea-box">
+                <h2>Customer review</h2>
+                <p>customers can rate us so that we can improve ourshelf</p>
+            </div>
+            <div class="fea-box">
+                <h2>Customer review</h2>
+                <p>customers can rate us so that we can improve us</p>
+            </div>
+            <div class="fea-box">
+                <h2>Customer review</h2>
+                <p>customers can rate us so that we can improve us</p>
+            </div>
+        </div>
+    </section>
+    <section class="slots">
+        <div class="container">
+            <h3>Parking slots available</h3>
+            <div class="slot-list">
+                <!--slots dynamically populated based on availability-->
+                <%- slotListHtml %>
+            </div>
+              
+        </div>
+    </section>
+    <footer >
+        <div id="contactus">
+            <h3>Feel free to contact me</h3>
+            mob: +91 9348483494 <br>
+            email: chiranjibmohapatra2001@gmail.com 
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
